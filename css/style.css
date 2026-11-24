@@ -136,11 +136,8 @@ img { display: block; }
 }
 .work a { display: block; }
 .work img {
-  max-width: 100%;
-  width: auto;
-  height: auto;
-  /* 縦長画像が画面からはみ出さないように */
-  max-height: calc(100svh - var(--feed-top) - var(--m));
+  width: 100%;    /* どの比率の画像も、16:9の画像と同じ幅に揃える */
+  height: auto;   /* 高さは元の比率のまま */
 }
 
 /* 画像未設定のときの仮ボックス（コンプの×印） */
