@@ -7,11 +7,11 @@
 
   const LANGS = [["en", "ENG"], ["ja", "JPN"], ["ko", "KOR"]];
   const THEMES = [["light", "LIGHT"], ["dark", "DARK"]];
-  const NAV = [
+    const NAV = [
     ["top", "TOP", "/"],
-    ["works", "WORKS", "works.html"],
-    ["experiment", "EXPERIMENT", "experiment.html"],
-    ["contact", "CONTACT", "contact.html"]
+    ["works", "WORKS", "/works"],
+    ["experiment", "EXPERIMENT", "/experiment"],
+    ["contact", "CONTACT", "/contact"]
   ];
 
   const store = {
