@@ -27,7 +27,7 @@
 }
 
 /* 和文・ハングルは行送り1.2だと詰まりすぎるので少し広げる */
-html:lang(ja), html:lang(ko) { --lh: 1.5; }
+html:lang(ja), html:lang(ko) { --lh: 1.3; }
 
 /* ダークモード：背景を反転するだけ（文字は下の difference で自動反転） */
 html[data-theme="dark"] {
@@ -355,6 +355,7 @@ html:lang(ko) .hero-name { font-family: var(--font-ko); }
     font-size: 21vw;
     text-align: right;
     overflow: hidden;
+    padding-bottom: 0.2em;   /* ← 追加：y や p の下側が切れないよう余白を足す */
   }
     .works-grid {
     grid-template-columns: 1fr;

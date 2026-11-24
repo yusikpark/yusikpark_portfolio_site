@@ -4,8 +4,8 @@
 window.I18N = {
   en: {
     statement: [
-      "Currently based in Tokyo. I am a visual designer and art director focusing on minimalist and industrial aesthetics, <br>highly inspired by architectural structures and futuristic forms.",
-      "Bridging 2D graphics, 3D modeling, and motion design to craft cohesive brand stories. I also engage in creative direction for street culture and fashion projects."
+      "Graphic designer and art director based in Tokyo. <br>Graduated from the Department of Architecture, Waseda University.",
+      "Designing brand identities through a minimal, industrial visual language, grounded in a structural perspective rooted in architecture. <br>Also active in art direction within street culture, including dance events."
     ],
     info: [
       ["Services", "Art Direction / Brand Identity / Logo Design / Graphic Design"],
@@ -23,8 +23,8 @@ window.I18N = {
 
   ja: {
     statement: [
-      "東京を拠点に活動するグラフィックデザイナー／アートディレクター。 <br>早稲田大学創造理工学部建築学科卒。<br>建築的な構造や未来的なフォルムに着想を得た、ミニマルでインダストリアルな表現を軸にしています。",
-      "2Dグラフィック、3Dモデリング、モーションデザインを横断し、一貫性のあるブランドストーリーをつくります。 <br>ストリートカルチャーやファッション分野のクリエイティブディレクションも手がけています。"
+      "東京を拠点とするグラフィックデザイナー／アートディレクター。 <br>早稲田大学創造理工学部建築学科卒業。",
+      "建築に由来する構造的な視点を軸に、ミニマルかつインダストリアルな表現でブランドアイデンティティを設計。 <br>ダンスイベントをはじめ、ストリートカルチャー領域のアートディレクションにも従事。"
     ],
     info: [
       ["Services", "アートディレクション / ブランドアイデンティティ / ロゴデザイン / グラフィックデザイン"],
@@ -42,8 +42,8 @@ window.I18N = {
 
   ko: {
     statement: [
-      "도쿄를 기반으로 활동하는 비주얼 디자이너이자 아트 디렉터입니다. <br>건축적 구조와 미래적인 형태에서 영감을 받아 미니멀하고 인더스트리얼한 미학을 추구합니다.",
-      "2D 그래픽, 3D 모델링, 모션 디자인을 넘나들며 일관된 브랜드 스토리를 만들어 갑니다. <br>스트리트 컬처와 패션 프로젝트의 크리에이티브 디렉션도 맡고 있습니다."
+      "도쿄를 기반으로 활동하는 그래픽 디자이너이자 아트 디렉터. <br>와세다대학교 창조이공학부 건축학과 졸업.",
+      "건축에서 비롯된 구조적인 시점을 바탕으로, 미니멀하고 인더스트리얼한 표현을 통한 브랜드 아이덴티티 설계. <br>댄스 이벤트를 비롯한 스트리트 컬처 분야의 아트 디렉션에도 참여."
     ],
     info: [
       ["Services", "아트 디렉션 / 브랜드 아이덴티티 / 로고 디자인 / 그래픽 디자인"],
