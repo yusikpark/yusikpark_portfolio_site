@@ -364,3 +364,24 @@ html:lang(ko) .hero-name { font-family: var(--font-ko); }
   }
   .work-caption { margin-top: 6px; }
 }
+
+/* ---------- スマホ：TOP以外では左テキストを INFO ボタンで開閉 ---------- */
+.info-toggle { display: none; }   /* PCでは出さない */
+
+@media (max-width: 767px) {
+  body:not([data-page="top"]) .info-toggle { display: inline; }
+  body:not([data-page="top"]) .site-info { display: none; }
+  body:not([data-page="top"]) main { padding-top: calc(var(--m) + var(--line) * 2); }
+
+  /* 開いたとき：画面いっぱいに表示（メニューは上に残る） */
+  html.info-open body:not([data-page="top"]) .site-info {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 9;
+    overflow-y: auto;
+    background: var(--bg);
+    padding: calc(var(--m) + var(--line) * 3) var(--m) var(--m);
+  }
+  html.info-open body { overflow: hidden; }   /* 開いている間は後ろをスクロールさせない */
+}

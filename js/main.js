@@ -31,6 +31,7 @@
 
   let lang = initialLang();
   let theme = root.dataset.theme || "light";
+  let infoOpen = false;   // スマホ：左テキスト（INFO）を開いているか
 
   const toggleGroup = (items, current, attr, label) =>
     `<div class="toggle" role="group" aria-label="${label}">` +
@@ -147,11 +148,12 @@
         </nav>
         <div class="toggles">
           ${toggleGroup(LANGS, lang, "lang", "Language")}
+          <button type="button" class="info-toggle" aria-expanded="${infoOpen}" aria-controls="site-info">${infoOpen ? "CLOSE" : "INFO"}</button>
           ${toggleGroup(THEMES, theme, "theme", "Color mode")}
         </div>
       </header>
 
-      <aside class="site-info">
+      <aside class="site-info" id="site-info">
         <p class="block"><a href="index.html">${SITE.name}</a></p>
         ${t.statement.map((p) => `<p class="block statement">${p}</p>`).join("")}
         ${t.info.map(([dt, dd]) => `<dl class="block"><dt>${dt}</dt><dd>${dd}</dd></dl>`).join("")}
@@ -167,9 +169,16 @@
     renderWorks();
   }
 
+  // メニュー周りのボタン（INFO・言語・ライト/ダーク）
   mount.addEventListener("click", (e) => {
     const btn = e.target.closest("button");
     if (!btn) return;
+    // スマホ：INFOボタンで左テキストを開閉
+    if (btn.classList.contains("info-toggle")) {
+      setInfo(!infoOpen);
+      mount.querySelector(".info-toggle")?.focus();
+      return;
+    }
     if (btn.dataset.lang) {
       lang = btn.dataset.lang;
       store.set("lang", lang);
@@ -184,11 +193,21 @@
     mount.querySelector(sel)?.focus();
   });
 
+  // INFOの開閉（Escキーでも閉じる）
+  function setInfo(open) {
+    infoOpen = open;
+    root.classList.toggle("info-open", open);
+    render();
+  }
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && infoOpen) setInfo(false);
+  });
+
   render();
   // フォントの読み込みが終わったら測り直す
   document.fonts?.ready.then(renderHero);
 
-    // 十字線
+  // 十字線
   //  PC（マウス）：カーソルに追従
   //  スマホ（タッチ）：触れた位置に出て指に追従し、離すと0.6秒後に消える
   const lineX = document.createElement("div");
