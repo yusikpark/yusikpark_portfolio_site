@@ -29,7 +29,7 @@ window.I18N = {
     info: [
       ["Services", "アートディレクション / ブランドアイデンティティ / ロゴデザイン / グラフィックデザイン"],
       ["Based in", "日本・東京"],
-      ["Languages", "日本語 / 韓国語 / 英語（読み書きのみ）"],
+      ["Languages", "日本語 / 韓国語"],
       ["Availability", "新規のご依頼を受け付けています"]
     ],
     contact: "Contact",
@@ -48,7 +48,7 @@ window.I18N = {
     info: [
       ["Services", "아트 디렉션 / 브랜드 아이덴티티 / 로고 디자인 / 그래픽 디자인"],
       ["Based in", "일본 도쿄"],
-      ["Languages", "일본어 / 한국어 / 영어 (읽기·쓰기만 가능)"],
+      ["Languages", "일본어 / 한국어 / 영어"],
       ["Availability", "새로운 프로젝트 의뢰를 받고 있습니다"]
     ],
     contact: "Contact",
