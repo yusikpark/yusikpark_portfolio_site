@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+  <title>yusikpark</title>
+  <meta name="description" content="yusikpark — Visual designer and art director based in Tokyo.">
+  <!-- ちらつき防止：表示前にライト/ダークと言語を反映 -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme") ||
+          (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.dataset.theme = t;
+        var l = localStorage.getItem("lang");
+        if (l) document.documentElement.lang = l;
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/i18n.js" defer></script>
+  <script src="js/works.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body data-page="works">
+  <!-- 左テキスト＋右上メニューは js/main.js が全ページ共通で描画 -->
+  <div id="site-chrome"></div>
+
+    <main>
+    <!-- 作品を追加するときは <li class="work-card"> 〜 </li> を1つ複製して書き換える -->
+    <ul class="works-grid">
+      <li class="work-card">
+        <a href="work-01.html">
+          <!-- 画像を入れたら、下の1行を次の行に差し替え：
+               <div class="work-thumb"><img src="images/works/01/thumb.jpg" alt="Project name" loading="lazy"></div> -->
+                    <div class="work-thumb"><img src="images/works/01/thumb.jpg" alt="A SCENE" loading="lazy"></div>
+                    <p class="work-caption" data-work="work-01"></p>
+        </a>
+      </li>
+      <li class="work-card">
+        <a href="work-02.html">
+                    <div class="work-thumb"><img src="images/works/02/thumb.jpg" alt="GAME vol.1" loading="lazy"></div>
+          <p class="work-caption" data-work="work-02"></p>
+        </a>
+      </li>
+
+    </ul>
+  </main>
+</body>
+</html>
