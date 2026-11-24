@@ -8,7 +8,7 @@
   const LANGS = [["en", "ENG"], ["ja", "JPN"], ["ko", "KOR"]];
   const THEMES = [["light", "LIGHT"], ["dark", "DARK"]];
   const NAV = [
-    ["top", "TOP", "index.html"],
+    ["top", "TOP", "/"],
     ["works", "WORKS", "works.html"],
     ["experiment", "EXPERIMENT", "experiment.html"],
     ["contact", "CONTACT", "contact.html"]
@@ -154,7 +154,7 @@
       </header>
 
       <aside class="site-info" id="site-info">
-        <p class="block"><a href="index.html">${SITE.name}</a></p>
+        <p class="block"><a href="/">${SITE.name}</a></p>
         ${t.statement.map((p) => `<p class="block statement">${p}</p>`).join("")}
         ${t.info.map(([dt, dd]) => `<dl class="block"><dt>${dt}</dt><dd>${dd}</dd></dl>`).join("")}
         <dl class="block">
