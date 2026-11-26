@@ -302,6 +302,39 @@ html:lang(ko) .hero-name { font-family: var(--font-ko); }
   .contact-email { margin-left: 0; font-size: 8.5vw; }
 }
 
+/* ---------- 404 ---------- */
+.notfound {
+  position: fixed;
+  right: var(--m);
+  bottom: calc(15 * var(--u));
+  text-align: right;
+  color: var(--fg);
+}
+.notfound-text + .notfound-text { margin-top: var(--line); }
+.notfound-code {
+  margin-top: var(--line);
+  font-family: var(--font-en);
+  font-weight: 500;
+  font-size: calc(242 * var(--u));      /* TOPの名前と同じ大きさ */
+  line-height: 1;
+  white-space: nowrap;
+}
+.notfound-code .char:hover {
+  color: transparent;
+  -webkit-text-stroke: 0.5px var(--accent);
+}
+@media (hover: hover) {
+  .notfound a:hover { color: var(--accent); }
+}
+@media (max-width: 767px) {
+  .notfound {
+    position: static;
+    text-align: left;
+    padding: calc(var(--line) * 2) var(--m) var(--m);
+  }
+  .notfound-code { font-size: 40vw; }
+}
+
 
 /* =========================================================
    スマホ（〜767px）
