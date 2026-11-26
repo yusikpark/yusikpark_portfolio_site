@@ -55,6 +55,8 @@ body {
   letter-spacing: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  min-height: 100lvh;   /* 下のツールバーの裏側まで、ページの背景で覆う */
 }
 html:lang(ja) body { font-family: var(--font-ja); }
 html:lang(ko) body { font-family: var(--font-ko); word-break: keep-all; }

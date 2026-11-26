@@ -243,4 +243,25 @@
       hideTimer = setTimeout(() => root.classList.remove("has-cursor"), 600);   // ← 消えるまでの時間（ミリ秒）
     }, { passive: true });
   }
+
+    // ライト/ダークの反映（スマホで背景が描き直されない現象の対策込み）
+  function applyTheme(t) {
+    root.dataset.theme = t;
+    const bg = getComputedStyle(root).getPropertyValue("--bg").trim();
+    root.style.backgroundColor = bg;
+    document.body.style.backgroundColor = bg;
+    let meta = document.querySelector('meta[name="theme-color"]');
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.name = "theme-color";
+      document.head.appendChild(meta);
+    }
+    meta.content = bg;   // アドレスバー周りの色も合わせる
+
+    // iPhoneのSafari対策：ページの高さを一瞬だけ変えて、画面全体を描き直させる
+    root.style.minHeight = "calc(100% + 1px)";
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      root.style.minHeight = "";
+    }));
+  }
 })();
